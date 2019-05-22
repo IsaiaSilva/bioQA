@@ -3,7 +3,9 @@ class ListarProdutoPage
 
     def menu_listar
         find(:xpath, '//html/body/nav/div[2]/ul[1]/li[1]/a/span[1]').click
+        sleep 2
         find(:xpath, '//html/body/nav/div[2]/ul[1]/li[1]/ul/li[1]/a').click
+        
     end
 
     def paginacao(count)

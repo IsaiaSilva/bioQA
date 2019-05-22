@@ -2,8 +2,13 @@ class EditarProdutoPage
     include Capybara::DSL
 
     def selecionar_produto
-        #CLica no primeiro produto da lista
-        @first_produto = find('body > div > table > tbody > tr:nth-child(2) > td:nth-child(1)').click
+        # CLica no primeiro produto da lista (O clique de seleção do produto pode ser realizado em todos os campos...foi escolhido apenas um)
+        produto_nome = find('body > div > table > tbody > tr:nth-child(2) > td:nth-child(1)').click
+        
+      #  produto_codigo = find(:xpath, '//html/body/div/table/tbody/tr[2]/td[2]').click
+      #  produto_fabricante = find('body > div > table > tbody > tr:nth-child(2) > td:nth-child(3)').click
+      #  produto_tipo = find('body > div > table > tbody > tr:nth-child(2) > td:nth-child(4)').click
+      #  produto_status = find('body > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > span').click
     end
 
     def editar_valores
@@ -48,7 +53,9 @@ class EditarProdutoPage
     end
 
     def salvar_alteracoes
+        sleep 2
         find('#edit_product_712 > div:nth-child(6) > div:nth-child(4) > div > div > input').click
+        sleep 2
     end
 
 end

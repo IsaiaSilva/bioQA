@@ -21,6 +21,6 @@ Cenario: A listagem deve ser paginada pelo total de 10 resultados.
 
 #TC_003 -> As informações da listagem deve ser: Nome, Tipo, Fabricante e Status.
 @fd
-Cenario: As informações da listagem deve ser: Nome Tipo Fabricante e Status
+Cenario: Campos devem ser exibidos nas informações da listagem
     Dado que desejo listar os produtos
     Entao os campos "Nome", "Fabricante", "Tipo" e "Status" devem ser exibidos

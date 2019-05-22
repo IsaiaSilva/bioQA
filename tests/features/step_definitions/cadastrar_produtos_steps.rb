@@ -73,11 +73,15 @@ end
 
 #TC_006
 Entao("o campo tipo possui apenas os valores {string} e {string}") do |medicamentos, mat_medicos|
-    puts medicamentos
-    puts mat_medicos
+    #puts medicamentos
+    #puts mat_medicos
     med = find('#product_kind').all(:css, 'option').find { |o| o.value == 'med' }.select_option
     mat = find('#product_kind').all(:css, 'option').find { |o| o.value == 'mat' }.select_option
 
     expect(med.text).to eq medicamentos
     expect(mat.text).to eq mat_medicos
+
+    #clicar para abrir o combo e exibir os 2 valores no print do relatório
+    #find('#product_kind').click
+    #sleep 2
 end
