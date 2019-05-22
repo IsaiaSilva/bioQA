@@ -1,0 +1,20 @@
+## YAML Templates
+---
+
+default: -p pretty -p homolog -p chrome -p html
+pretty: --format pretty
+for_ci: --format progress
+html: --format html --out=results/relatorio.html
+json: --format json --out=results/relatorio.json
+homolog: ENVIRONMENT_TYPE=homolog
+
+chrome:  BROWSERS=chrome
+firefox: BROWSERS=firefox
+edge: BROWSERS=edge
+
+chrome_headless:  BROWSERS=chrome_headless
+firefox_headless: BROWSERS=firefox_headless
+edge_headless: BROWSERS=edge_headless
+
+staging: ENV=staging
+production:  ENV=production
